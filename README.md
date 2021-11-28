@@ -12,6 +12,10 @@ This is the bikeshare project which was coded during the Udacity Online Course.
 ### Files used
 bikeshare_01.py
 Data files from Udacity.
+Additional information about data files used from Udacity:
+washington.csv
+chicago.csv
+new_york_city.csv
 
 ### Credits
 Thanks to Udacity for this online course.
