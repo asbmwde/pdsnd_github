@@ -1,7 +1,9 @@
+# Additional third party modules which are used
 import time
 import pandas as pd
 import numpy as np
 
+# Definition of data files which are supported by Udacity to do the analysis
 CITY_DATA = { 'chicago':       'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington':    'washington.csv' }
@@ -30,9 +32,9 @@ def get_filters():
             str_match = '  nothing!  '
         return str_match
 
-    print('-'*60)
+    print('-'*65)
     print('Hello! Let\'s explore some US bikeshare data!')
-    print('-'*60)
+    print('-'*65)
 
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = 'nothing!'
@@ -65,9 +67,9 @@ def get_filters():
         print('--> Because there is no clear match about your choice, the automated selection is: ', day)
 
     # Output final parameters for analyzing
-    print('-'*60)
+    print('-'*65)
     print('Final Selections: City: {}, Month: {}, Day: {}'.format(city, month, day).title())
-    print('-'*60)
+    print('-'*65)
 
     return city, month, day
 
@@ -139,7 +141,7 @@ def time_stats(df):
     print('The most common start hour is:      {} (counts: {})'.format(popular_start_hour, counter))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*65)
 
 
 def station_stats(df):
@@ -164,9 +166,6 @@ def station_stats(df):
     counter = df['End Station'].value_counts()[0]
     print('The most common end station is:     {} (counts: {})'.format(popular_end_station, counter))
 
-    # Only for debug purpose
-    # print(df['Start Station'].value_counts())
-    # print(df['End Station'].value_counts())
 
     # TO DO: display most frequent combination of start station and end station trip
     # building trips
@@ -178,7 +177,7 @@ def station_stats(df):
     print('The most frequent trip is:          {} (counts: {})'.format(popular_trip_stations, counter))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*65)
 
 
 def trip_duration_stats(df):
@@ -208,11 +207,8 @@ def trip_duration_stats(df):
     min_travel_time = df['Trip Duration'].min()
     print('The min travel time is:           ', min_travel_time, ' in s')
 
-    # Only for debug purpose
-    # print(df.describe())
-
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*65)
 
 
 def user_stats(df):
@@ -240,8 +236,6 @@ def user_stats(df):
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df:
         print('\nBirth year statistics:')
-        # Following line is only fpr debug purpose
-        # print(df['Birth Year'].value_counts(dropna=False))
         print('The earliest birth year is:       ', df['Birth Year'].min())
         print('The most recent birth year is:    ', df['Birth Year'].max())
         print('The mean birth year is:           ', df['Birth Year'].mean())
@@ -251,7 +245,7 @@ def user_stats(df):
         print('\nSorry, but there are no data about birth year in this dataset :-(')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*65)
 
 
 def display_raw_data(df):
@@ -279,7 +273,7 @@ def display_raw_data(df):
             print('Thank you for joining the survey.')
             break
 
-    print('-'*60)
+    print('-'*65)
 
 def main():
     while True:
