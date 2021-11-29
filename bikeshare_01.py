@@ -1,7 +1,9 @@
+# Additional third party modules which are used
 import time
 import pandas as pd
 import numpy as np
 
+# Definition of data files which are supported by Udacity to do the analysis
 CITY_DATA = { 'chicago':       'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington':    'washington.csv' }
