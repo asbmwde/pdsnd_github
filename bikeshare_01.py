@@ -164,9 +164,6 @@ def station_stats(df):
     counter = df['End Station'].value_counts()[0]
     print('The most common end station is:     {} (counts: {})'.format(popular_end_station, counter))
 
-    # Only for debug purpose
-    # print(df['Start Station'].value_counts())
-    # print(df['End Station'].value_counts())
 
     # TO DO: display most frequent combination of start station and end station trip
     # building trips
@@ -208,9 +205,6 @@ def trip_duration_stats(df):
     min_travel_time = df['Trip Duration'].min()
     print('The min travel time is:           ', min_travel_time, ' in s')
 
-    # Only for debug purpose
-    # print(df.describe())
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*60)
 
@@ -240,8 +234,6 @@ def user_stats(df):
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df:
         print('\nBirth year statistics:')
-        # Following line is only fpr debug purpose
-        # print(df['Birth Year'].value_counts(dropna=False))
         print('The earliest birth year is:       ', df['Birth Year'].min())
         print('The most recent birth year is:    ', df['Birth Year'].max())
         print('The mean birth year is:           ', df['Birth Year'].mean())
