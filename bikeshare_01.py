@@ -30,9 +30,9 @@ def get_filters():
             str_match = '  nothing!  '
         return str_match
 
-    print('-'*60)
+    print('-'*65)
     print('Hello! Let\'s explore some US bikeshare data!')
-    print('-'*60)
+    print('-'*65)
 
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = 'nothing!'
@@ -65,9 +65,9 @@ def get_filters():
         print('--> Because there is no clear match about your choice, the automated selection is: ', day)
 
     # Output final parameters for analyzing
-    print('-'*60)
+    print('-'*65)
     print('Final Selections: City: {}, Month: {}, Day: {}'.format(city, month, day).title())
-    print('-'*60)
+    print('-'*65)
 
     return city, month, day
 
@@ -139,7 +139,7 @@ def time_stats(df):
     print('The most common start hour is:      {} (counts: {})'.format(popular_start_hour, counter))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*65)
 
 
 def station_stats(df):
@@ -175,7 +175,7 @@ def station_stats(df):
     print('The most frequent trip is:          {} (counts: {})'.format(popular_trip_stations, counter))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*65)
 
 
 def trip_duration_stats(df):
@@ -206,7 +206,7 @@ def trip_duration_stats(df):
     print('The min travel time is:           ', min_travel_time, ' in s')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*65)
 
 
 def user_stats(df):
@@ -243,7 +243,7 @@ def user_stats(df):
         print('\nSorry, but there are no data about birth year in this dataset :-(')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*60)
+    print('-'*65)
 
 
 def display_raw_data(df):
@@ -271,7 +271,7 @@ def display_raw_data(df):
             print('Thank you for joining the survey.')
             break
 
-    print('-'*60)
+    print('-'*65)
 
 def main():
     while True:
